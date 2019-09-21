@@ -72,12 +72,12 @@ blue-gray = #546e7a
 ;=============================================================================================
 
 [bar/main]
-width = 59%
+width = 60%
 height = 24
 offset-x = 20%
 offset-y = 0%
 bottom = false
-fixed-center = false
+fixed-center = true
 line-size = 2
 
 background = ${color.bg}
@@ -100,7 +100,7 @@ scroll-down = i3wm-wsprev
 
 modules-left = network-traffic memory-info system-cpu-frequency cpu-load
 modules-center = middle_text
-modules-right = filesystem system-cpu-temppercore system-fan-speed battery
+modules-right = battery system-fan-speed system-cpu-temppercore filesystem
  
 ;MODULES======================================================================================
 
@@ -192,22 +192,22 @@ ramp-coreload-7 = █
 type = internal/fs
 mount-0 = /
 interval = 1
-label-mounted-background = ${color.shade4}
+label-mounted-background = ${color.shade1}
 format-mounted = <label-mounted>
-label-mounted-padding = 2
+label-mounted-padding = 4
 label-mounted =  %used% used of %total%
 label-unmounted = %mountpoint%: not mounted
 
 [module/system-cpu-temppercore]
 type = custom/script
-format-background = ${color.shade3}
+format-background = ${color.shade2}
 format-padding = 2
 exec = ${path.system-cpu-temppercore}
 interval = 1
 
 [module/system-fan-speed]
 type = custom/script
-format-background = ${color.shade2}
+format-background = ${color.shade3}
 format-padding = 2
 exec = ${path.system-fan-speed}
 interval = 1
@@ -221,11 +221,11 @@ adapter = AC
 poll-interval = 1
 interval = 1
 format-charging = <animation-charging> <label-charging>
-format-charging-background = ${color.shade1}
+format-charging-background = ${color.shade4}
 format-charging-padding = 2
 label-charging = %percentage%%
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-background = ${color.shade1}
+format-discharging-background = ${color.shade4}
 format-discharging-padding = 2
 label-discharging = %percentage%% 
 format-full = <label-full>

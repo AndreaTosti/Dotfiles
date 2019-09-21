@@ -30,6 +30,7 @@ and then modified:
 * Workspace Theme -> Plasma Theme + Splash Screen: [Koompi](https://store.kde.org/p/1309800)
 * Colours + Application Style -> Window Decorations: [Koompi](https://store.kde.org/p/1309802)
 * Icons: [Tela](https://store.kde.org/p/1279924)
+* Wallpaper: [Sailing Ship](https://wallhaven.cc/w/45ope1)
 
 #### Terminal
 

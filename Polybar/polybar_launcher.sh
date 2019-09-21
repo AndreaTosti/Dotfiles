@@ -8,4 +8,4 @@ while pgrep -x polybar >/dev/null; do sleep 1; done
 
 # Launch
 sleep 5;
-polybar --reload -c polybar_config main &
+polybar --reload -c ~/Dotfiles/Polybar/polybar_config main &

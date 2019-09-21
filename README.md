@@ -40,7 +40,7 @@ and then modified:
 ### Boot Manager
 #### Refind
 
-
+[Modified ursamajor-rEFInd](https://github.com/hungerys/Dotfiles/tree/master/Refind)
 ---
 #### TODO
 * Upload and rearrange all the configurations I'm using

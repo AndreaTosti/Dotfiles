@@ -1,0 +1,260 @@
+;=============================================================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   Created By Aditya Shakya, edited by Andrea Tosti
+;
+;=============================================================================================
+
+;PATHS========================================================================================
+[path]
+system-cpu-frequency = ~/Dotfiles/polybar-scripts/system-cpu-frequency/system-cpu-frequency.sh
+network-traffic = ~/Dotfiles/polybar-scripts/network-traffic/network-traffic.sh
+memory-info = ~/Dotfiles/polybar-scripts/memory/memory.sh
+system-cpu-temppercore = ~/Dotfiles/polybar-scripts/system-cpu-temppercore/system-cpu-temppercore.sh
+system-fan-speed = ~/Dotfiles/polybar-scripts/system-fan-speed/system-fan-speed.sh
+;=============================================================================================
+
+[color]
+
+trans = #00000000
+white = #FFFFFF
+black = #000000
+
+bg = ${color.shade5}
+fg = #FFFFFF
+ 
+fg-alt = #A9ABB0
+
+acolor = #FFFFFF
+curgent = #EF5350
+coccupied = #42A5F5
+
+shade1 = #263238
+shade2 = #37474F
+shade3 = #455A64
+shade4 = #546E7A
+shade5 = #607D8B
+shade6 = #78909C
+shade7 = #90A4AE
+shade8 = #B0BEC5
+ashade8 = #2C2C2C
+
+## Material Colors
+
+red = #e53935
+pink = #d81b60
+purple = #8e24aa
+deep-purple = #5e35b1
+indigo = #3949ab
+blue = #1e88e5
+light-blue = #039be5
+cyan = #00acc1
+teal = #00897b
+green = #43a047
+light-green = #7cb342
+lime = #c0ca33
+yellow = #fdd835
+amber = #ffb300
+orange = #fb8c00
+deep-orange = #f4511e
+brown = #6d4c41
+grey = #757575
+blue-gray = #546e7a
+
+;=============================================================================================
+
+[bar/main]
+width = 59%
+height = 24
+offset-x = 20%
+offset-y = 0%
+bottom = false
+fixed-center = false
+line-size = 2
+
+background = ${color.bg}
+foreground = ${color.fg}
+
+;=============================================================================================
+
+font-0 = "Fantasque Sans Mono:pixelsize=11;3"
+font-1 = "Iosevka Nerd Font:pixelsize=13;3"
+
+;=============================================================================================
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+;=============================================================================================
+
+modules-left = network-traffic memory-info system-cpu-frequency cpu-load
+modules-center = middle_text
+modules-right = filesystem system-cpu-temppercore system-fan-speed battery
+ 
+;MODULES======================================================================================
+
+[module/middle_text]
+type = custom/text
+content = 
+content-padding = 0
+;content-background = ${color.shade5}
+
+[module/workspaces]
+type = internal/xworkspaces
+pin-workspaces = false
+enable-click = true
+enable-scroll = true
+format-padding = 1
+
+;icon-0 = 1;❶
+;icon-1 = 2;❷
+;icon-2 = 3;❸
+;icon-3 = 4;❹
+;icon-4 = 5;❺
+;icon-5 = 6;❻
+;icon-6 = 7;❼
+;icon-7 = 8;❽
+;icon-8 = 9;❾
+;icon-9 = 10;❿
+
+icon-default = 
+
+format = <label-state>
+format-background = ${color.shade1}
+label-active = 
+label-occupied = 
+label-urgent = 
+label-empty = 
+
+label-empty-padding = 1
+label-active-padding = 1
+label-urgent-padding = 1
+label-occupied-padding = 1
+
+label-empty-foreground = ${color.fg}
+label-active-foreground = ${color.acolor}
+label-urgent-foreground = ${color.curgent}
+label-occupied-foreground = ${color.coccupied}
+
+;LEFT=========================================================================================
+
+[module/network-traffic]
+type=custom/script
+exec = ${path.network-traffic}
+tail = true
+format-background = ${color.shade1}
+format-padding = 2
+
+[module/memory-info]
+type = custom/script
+exec = ${path.memory-info}
+format-background = ${color.shade2}
+format-padding = 2
+interval = 1
+
+[module/system-cpu-frequency]
+type = custom/script
+format-background = ${color.shade3}
+format-padding = 2
+exec = ${path.system-cpu-frequency}
+interval = 1
+
+[module/cpu-load]
+type = internal/cpu
+format-background = ${color.shade4}
+format-padding = 1
+interval = 1
+format = <ramp-coreload>
+ramp-coreload-spacing = 1
+ramp-coreload-0 = ▁
+ramp-coreload-1 = ▂
+ramp-coreload-2 = ▃
+ramp-coreload-3 = ▄
+ramp-coreload-4 = ▅
+ramp-coreload-5 = ▆
+ramp-coreload-6 = ▇
+ramp-coreload-7 = █
+
+;RIGHT========================================================================================
+
+[module/filesystem]
+type = internal/fs
+mount-0 = /
+interval = 1
+label-mounted-background = ${color.shade4}
+format-mounted = <label-mounted>
+label-mounted-padding = 2
+label-mounted =  %used% used of %total%
+label-unmounted = %mountpoint%: not mounted
+
+[module/system-cpu-temppercore]
+type = custom/script
+format-background = ${color.shade3}
+format-padding = 2
+exec = ${path.system-cpu-temppercore}
+interval = 1
+
+[module/system-fan-speed]
+type = custom/script
+format-background = ${color.shade2}
+format-padding = 2
+exec = ${path.system-fan-speed}
+interval = 1
+
+[module/battery]
+type = internal/battery
+full-at = 99
+time-format = %H:%M
+battery = BAT0
+adapter = AC
+poll-interval = 1
+interval = 1
+format-charging = <animation-charging> <label-charging>
+format-charging-background = ${color.shade1}
+format-charging-padding = 2
+label-charging = %percentage%%
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-background = ${color.shade1}
+format-discharging-padding = 2
+label-discharging = %percentage%% 
+format-full = <label-full>
+
+format-full-prefix = " "
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
+
+ramp-capacity-0-foreground = ${color.red}
+ramp-capacity-1-foreground = ${color.red}
+ramp-capacity-foreground   = ${color.fg}
+bar-capacity-width = 10
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-5 = 
+animation-charging-6 = 
+
+animation-charging-framerate = 750
+
+;EOF==========================================================================================

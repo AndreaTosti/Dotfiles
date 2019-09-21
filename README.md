@@ -22,7 +22,7 @@ and then modified:
 
 ### KDE Plasma
 
-[![Desktop](Images/desktop_480x270.png)](https://raw.githubusercontent.com/hungerys/Dotfiles/master/Images/desktop_1920x1080.png))
+[![Desktop](Images/desktop_480x270.png)](https://raw.githubusercontent.com/hungerys/Dotfiles/master/Images/desktop_1920x1080.png)
 
 #### System Settings -> Appearance
 

@@ -1,6 +1,6 @@
 ### Polybar
 
-![Polybar Preview](Polybar_preview.png?raw=true "Polybar Preview")
+![Polybar Preview](Polybar/Polybar_preview.png?raw=true "Polybar Preview")
 
 Both scripts and themes were taken from:
 

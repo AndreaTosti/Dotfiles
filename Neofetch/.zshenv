@@ -1,0 +1,1 @@
+neofetch --config ~/Dotfiles/Neofetch/config.conf --source ~/Dotfiles/Neofetch/ascii.txt

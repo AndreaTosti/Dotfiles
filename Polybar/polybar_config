@@ -72,9 +72,9 @@ blue-gray = #546e7a
 ;=============================================================================================
 
 [bar/main]
-width = 60%
+width = 100%
 height = 24
-offset-x = 20%
+offset-x = 0%
 offset-y = 0%
 bottom = false
 fixed-center = true

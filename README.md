@@ -36,6 +36,7 @@ and then modified:
 #### Terminal
 
 * Theme: [Nordic konsole](https://store.kde.org/p/1329371)
+* Kwin script to fix Yakuake blur: [Force Blur](https://store.kde.org/p/1294604)
 * Font: [MesloLGS](https://github.com/romkatv/powerlevel10k#recommended-meslo-nerd-font-patched-for-powerlevel10k)
 * Shell: [Zsh](http://zsh.sourceforge.net/) + [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 * Shell theme: [Powerlevel10k](https://github.com/romkatv/powerlevel10k)

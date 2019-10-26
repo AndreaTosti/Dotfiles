@@ -27,16 +27,16 @@ and then modified:
 
 #### System Settings -> Appearance
 
-* Look and Feel: [Koompi](https://store.kde.org/p/1321177/)
-* Workspace Theme -> Plasma Theme + Splash Screen: [Koompi](https://store.kde.org/p/1309800)
-* Colours + Application Style -> Window Decorations: [Koompi](https://store.kde.org/p/1309802)
-* Icons: [Tela](https://store.kde.org/p/1279924)
+* Look and Feel: [Nordic KDE](https://store.kde.org/p/1327093)
+* Workspace Theme -> Plasma Theme + Splash Screen: [Nordic KDE](https://store.kde.org/p/1327093)
+* Colours + Application Style -> Window Decorations: [Nordic KDE](https://store.kde.org/p/1327093)
+* Icons: [Nordic](https://www.gnome-look.org/dl?file_id=1567965545&file_type=application/x-xz&file_name=Nordic-Folders.tar.xz&file_size=24000&project_id=1267246)
 * Wallpaper: [Sailing Ship](https://wallhaven.cc/w/45ope1)
 
 #### Terminal
 
-* Theme: [Dracula](https://draculatheme.com/terminal)
-* Font: [FuraCode Nerd](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
+* Theme: [Nordic konsole](https://store.kde.org/p/1329371)
+* Font: [MesloLGS](https://github.com/romkatv/powerlevel10k#recommended-meslo-nerd-font-patched-for-powerlevel10k)
 * Shell: [Zsh](http://zsh.sourceforge.net/) + [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 * Shell theme: [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 ---

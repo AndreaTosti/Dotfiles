@@ -32,6 +32,7 @@ and then modified:
 * Colours + Application Style -> Window Decorations: [Nordic KDE](https://store.kde.org/p/1327093)
 * Icons: [Nordic](https://www.gnome-look.org/dl?file_id=1567965545&file_type=application/x-xz&file_name=Nordic-Folders.tar.xz&file_size=24000&project_id=1267246)
 * Wallpaper: [Sailing Ship](https://wallhaven.cc/w/45ope1)
+* Screen Locking: [Nebula 318](https://store.kde.org/p/1307936)
 
 #### Terminal
 

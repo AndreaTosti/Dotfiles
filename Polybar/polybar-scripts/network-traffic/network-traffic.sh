@@ -27,8 +27,8 @@ print_bit() {
 }
 
 INTERVAL=1
-# INTERFACES="wlp5s0"
-INTERFACES="wlan0"
+INTERFACES=$(iwgetid | awk '{print $1}')
+
 declare -A bytes
 
 for interface in $INTERFACES; do

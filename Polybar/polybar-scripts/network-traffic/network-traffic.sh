@@ -37,6 +37,7 @@ for interface in $INTERFACES; do
 done
 
 while true; do
+    INTERFACES=$(iwgetid | awk '{print $1}')    #In case of connection drop/change
     down=0
     up=0
 

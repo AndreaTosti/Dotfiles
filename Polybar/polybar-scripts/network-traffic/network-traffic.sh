@@ -45,14 +45,25 @@ while true; do
         bytes[now_rx_$interface]="$(cat /sys/class/net/"$interface"/statistics/rx_bytes)"
         bytes[now_tx_$interface]="$(cat /sys/class/net/"$interface"/statistics/tx_bytes)"
 
-        bytes_down=$((((${bytes[now_rx_$interface]} - ${bytes[past_rx_$interface]})) / INTERVAL))
-        bytes_up=$((((${bytes[now_tx_$interface]} - ${bytes[past_tx_$interface]})) / INTERVAL))
-
-        down=$(((( "$down" + "$bytes_down" ))))
-        up=$(((( "$up" + "$bytes_up" ))))
-
-        bytes[past_rx_$interface]=${bytes[now_rx_$interface]}
-        bytes[past_tx_$interface]=${bytes[now_tx_$interface]}
+        #if variable is unset or set to the empty string
+        #should happen when connection changes
+        if [ -z "${bytes[past_rx_$interface]}" ]; then
+            bytes[now_rx_$interface]=0
+            bytes[now_tx_$interface]=0
+            bytes_down=0
+            bytes_up=0
+            bytes[past_rx_$interface]=0
+            bytes[past_tx_$interface]=0
+            down=0
+            up=0
+        else
+            bytes_down=$((((${bytes[now_rx_$interface]} - ${bytes[past_rx_$interface]})) / INTERVAL))
+            bytes_up=$((((${bytes[now_tx_$interface]} - ${bytes[past_tx_$interface]})) / INTERVAL))
+            bytes[past_rx_$interface]=${bytes[now_rx_$interface]}
+            bytes[past_tx_$interface]=${bytes[now_tx_$interface]}
+            down=$(((( "$down" + "$bytes_down" ))))
+            up=$(((( "$up" + "$bytes_up" ))))
+        fi
     done
 
     filler='____________________________'

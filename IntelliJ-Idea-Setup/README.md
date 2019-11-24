@@ -1,6 +1,6 @@
 ### Manual settings for IntelliJ Community Edition([Version 2019.2.4](https://aur.archlinux.org/cgit/aur.git/log/?h=intellij-idea-ce))
 
-[![IntelliJ](Preview.png "IntelliJ Preview")](https://raw.githubusercontent.com/hungerys/Dotfiles/master/IntelliJ-Idea-Setup/Preview.png)
+[![IntelliJ](Preview.png?raw=true "IntelliJ Preview")](https://raw.githubusercontent.com/hungerys/Dotfiles/master/IntelliJ-Idea-Setup/Preview.png)
 
 ---
 * ##### *First startup (after fresh installation):* Skip Remaining and Set Defaults

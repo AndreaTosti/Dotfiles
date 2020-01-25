@@ -1,6 +1,6 @@
-### Manual settings for IntelliJ Community Edition([Version 2019.2.4](https://aur.archlinux.org/cgit/aur.git/log/?h=intellij-idea-ce))
+### Manual settings for IntelliJ Community Edition([Version 2019.3.2](https://aur.archlinux.org/cgit/aur.git/log/?h=intellij-idea-ce))
 
-[![IntelliJ](Preview.png?raw=true "IntelliJ Preview")](https://raw.githubusercontent.com/hungerys/Dotfiles/master/IntelliJ-Idea-Setup/Preview.png)
+<!-- [![IntelliJ](Preview.png?raw=true "IntelliJ Preview")](https://raw.githubusercontent.com/hungerys/Dotfiles/master/IntelliJ-Idea-Setup/Preview.png) -->
 
 ---
 * ##### *First startup (after fresh installation):* Skip Remaining and Set Defaults
@@ -13,8 +13,9 @@
           * [x] Show memory indicator
 * *Editor*
     * Font
-        * Font: [UbuntuMono Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/UbuntuMono/Regular/complete/Ubuntu%20Mono%20Nerd%20Font%20Complete%20Mono.ttf)
-        * Size: 18
+        * Font: [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
+        * Size: 15
+        * Line spacing: 1.2
     * Color Scheme
         * Color Scheme Font
           * Scheme: [Darcula Darker](https://plugins.jetbrains.com/plugin/index?xmlId=com.vecheslav.darculaDarkerTheme)

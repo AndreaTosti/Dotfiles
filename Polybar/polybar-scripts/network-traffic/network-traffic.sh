@@ -27,7 +27,12 @@ print_bit() {
 }
 
 INTERVAL=1
-INTERFACES=$(iwgetid | awk '{print $1}')
+
+# Considera tutte le interfacce di rete
+# https://stackoverflow.com/a/13175928
+# https://unix.stackexchange.com/a/33113
+
+INTERFACES=$(awk 'NR>2{print $1}' /proc/net/dev | tr -d ':')
 
 declare -A bytes
 
@@ -37,7 +42,7 @@ for interface in $INTERFACES; do
 done
 
 while true; do
-    INTERFACES=$(iwgetid | awk '{print $1}')    #In case of connection drop/change
+    INTERFACES=$(awk 'NR>2{print $1}' /proc/net/dev | tr -d ':')    #In case of connection drop/change
     down=0
     up=0
 
@@ -70,6 +75,6 @@ while true; do
     before_padding="ﰬ $(print_bytes $down) / ﰵ $(print_bytes $up)"
     padded="$(printf "%s" "$before_padding${filler:${#before_padding}}")"
     echo "${padded//'_'/' '}"
-
+    
     sleep $INTERVAL
 done

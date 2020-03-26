@@ -3,3 +3,7 @@
 
 #Fixes Energy Saving being ignored
 xset s off
+
+#https://forum.manjaro.org/t/how-disable-bios-beep-like-sound-in-some-applications/17094/5
+#Turn bell off
+xset -b

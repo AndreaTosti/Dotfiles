@@ -15,15 +15,12 @@ and then modified:
 * i chose a monospace font for the same reason as the previous point
 
 #### **Note** about display resolution, edit polybar_config:
-* **[1920x1080]** `width = 60%`, `offset-x = 20%` (*default*)
-* **[1920x1080]** `width = 100%`, `offset-x = 0%` (occupies all the available space)
-* **[1600x&nbsp;&nbsp;900]** `width = 68%`, `offset-x = 16%`
-* **[1368x&nbsp;&nbsp;768]** `width = 80%`, `offset-x = 10%`
+* **[Any]** `width = 100%`, `offset-x = 0%` (occupies all the available space)
 ---
 
 ### KDE Plasma
 
-[![Desktop](Images/desktop_480x270.png)](https://raw.githubusercontent.com/hungerys/Dotfiles/master/Images/desktop_1920x1080.png)
+[![Desktop](Images/desktop_2screens_thumbnail.png)](https://raw.githubusercontent.com/hungerys/Dotfiles/master/Images/desktop_2screens.png)
 
 #### System Settings -> Appearance
 
@@ -31,7 +28,7 @@ and then modified:
 * Workspace Theme -> Plasma Theme + Splash Screen: [Nordic KDE](https://store.kde.org/p/1327093)
 * Colours + Application Style -> Window Decorations: [Nordic KDE](https://store.kde.org/p/1327093)
 * Icons: [Nordic](https://www.gnome-look.org/dl?file_id=1567965545&file_type=application/x-xz&file_name=Nordic-Folders.tar.xz&file_size=24000&project_id=1267246)
-* Wallpaper: [Sailing Ship](https://wallhaven.cc/w/45ope1)
+* Wallpapers: [Sailing Ship](https://wallhaven.cc/w/45ope1) [Cityscape](https://wallhaven.cc/w/42xjzy)
 * Screen Locking: [Nebula 318](https://store.kde.org/p/1307936)
 
 #### Terminal

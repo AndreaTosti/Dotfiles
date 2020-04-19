@@ -22,6 +22,10 @@ and then modified:
 
 [![Desktop](Images/desktop_2screens_thumbnail.png)](https://raw.githubusercontent.com/hungerys/Dotfiles/master/Images/desktop_2screens.png)
 
+### Latte Dock
+
+Replaced the original KDE Plasma dock with Latte-Dock (See [here](https://github.com/AndreaTosti/Dotfiles/tree/master/Latte-Dock).)
+
 #### System Settings -> Appearance
 
 * Look and Feel: [Nordic KDE](https://store.kde.org/p/1327093)

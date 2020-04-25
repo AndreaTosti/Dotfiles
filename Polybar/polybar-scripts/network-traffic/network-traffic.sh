@@ -28,11 +28,12 @@ print_bit() {
 
 INTERVAL=1
 
-# Considera tutte le interfacce di rete
+# Considera tutte le interfacce di rete tranne quelle che
+# iniziano con br, docker, virbr
 # https://stackoverflow.com/a/13175928
 # https://unix.stackexchange.com/a/33113
 
-INTERFACES=$(awk 'NR>2{print $1}' /proc/net/dev | tr -d ':')
+INTERFACES=$(awk 'NR>2{print $1}' /proc/net/dev | sed 's/^br[^ ]*//' | sed 's/^docker[^ ]*//' | sed 's/^virbr[^ ]*//' | tr -d ':')
 
 declare -A bytes
 
@@ -42,7 +43,7 @@ for interface in $INTERFACES; do
 done
 
 while true; do
-    INTERFACES=$(awk 'NR>2{print $1}' /proc/net/dev | tr -d ':')    #In case of connection drop/change
+    INTERFACES=$(awk 'NR>2{print $1}' /proc/net/dev | sed 's/^br[^ ]*//' | sed 's/^docker[^ ]*//' | sed 's/^virbr[^ ]*//' | tr -d ':')    #In case of connection drop/change
     down=0
     up=0
 

@@ -7,6 +7,7 @@ ___
 Aggiungi i repository CN per la versione di Chromium-VAAPI compilata [how to](https://github.com/archlinuxcn/repo/blob/master/README.md)
 ___
 Installa Chromium-VAAPI dal repository CN `archlinuxcn/chromium-vaapi`
+Nota: non c'è più, in ogni caso all'aggiornamento di Manjaro fare `cd /usr/lib; sudo ln -s libre2.so.8 libre2.so.7`
 ___
 Configura Chrome per l'accelerazione hardware:
 

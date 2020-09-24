@@ -4,12 +4,7 @@ Install yay `sudo pacman -S yay`
 ___
 Disinstalla il pacchetto `xf86-video-intel` con `yay -R xf86-video-intel` per evitare il flickering durante lo screen-recording, assicurati di fare il logout per vederne gli effetti.
 ___
-Aggiungi i repository CN per la versione di Chromium-VAAPI compilata [how to](https://github.com/archlinuxcn/repo/blob/master/README.md)
-___
-Installa Chromium-VAAPI dal repository CN `archlinuxcn/chromium-vaapi`
-Nota: non c'è più, in ogni caso all'aggiornamento di Manjaro fare `cd /usr/lib; sudo ln -s libre2.so.8 libre2.so.7`
-___
-Configura Chrome per l'accelerazione hardware:
+Configura Chrome (versione 85+ dai repository ufficiali) per l'accelerazione hardware:
 
 `sudo nano ~/.config/chromium-flags.conf`
 
@@ -19,7 +14,7 @@ Aggiungi le righe
 --ignore-gpu-blacklist
 --enable-gpu-rasterization
 --enable-zero-copy
---disable-direct-composition
+--use-gl=desktop
 ```
 ___
 Per il monitoraggio della gpu vedi [qua](https://bbs.archlinux.org/viewtopic.php?pid=1831218#p1831218)

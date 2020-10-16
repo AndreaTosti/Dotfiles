@@ -14,7 +14,6 @@ Aggiungi le righe
 --ignore-gpu-blacklist
 --enable-gpu-rasterization
 --enable-zero-copy
---use-gl=desktop
 ```
 ___
 Per il monitoraggio della gpu vedi [qua](https://bbs.archlinux.org/viewtopic.php?pid=1831218#p1831218)
